@@ -9,6 +9,7 @@
         <a-select-option value="购物">购物</a-select-option>
       </a-select>
       <a-button type="primary" @click="add">保存</a-button>
+      <UploadCSV />
     </a-space>
   </a-card>
 
@@ -28,7 +29,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import http from '@/api/http'
-
+import UploadCSV from '@/components/UploadCSV.vue'   // 引入组件
 const item = ref('')
 const amount = ref(0)
 const category = ref('餐饮')
